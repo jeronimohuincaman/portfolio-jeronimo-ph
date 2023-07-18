@@ -15,6 +15,8 @@ a {
     text-decoration: none;
 }
 
+/* Header */
+
 .header-container {
     display: flex;
     height: 35px;
@@ -89,3 +91,55 @@ a {
     object-position: center;    
 }
 
+/* cuerpo de pagina */
+
+.contenido-container {
+    width: 100%;
+    height: 100vh;
+}
+
+/* filtro de imagenes */
+.filtro-btn-container {
+    width: 100%;
+    height: 2.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.filtro-btn-container button {
+    padding: 10px 15px;
+    margin: 5px;
+    font-size: 12px;
+    cursor: pointer;
+    border: none;
+    color: white;
+    border-radius: 42 0 42 0;
+}
+
+.filtro-btn-container .active{
+    background-color: #555;
+    color: #1E1E1E;
+    border-radius: 0 0 12px 12px ;
+}
+
+/* galeria de imagenes*/
+.galeria-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+.imagen-item {
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    overflow: hidden;
+    /* display: none; */
+}
+
+.imagen-item img {
+    width: 100%;
+    object-fit: contain;
+    object-position: center;
+}

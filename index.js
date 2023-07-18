@@ -1,3 +1,4 @@
+// funcionalid carrucel
 document.addEventListener("DOMContentLoaded", function() {
     const slides = document.querySelectorAll(".slide");
     let current_slide = 0;
@@ -21,3 +22,24 @@ document.addEventListener("DOMContentLoaded", function() {
     showSlide(current_slide);
     startAutoSlide();
 })
+
+// Funcionalidad filtro
+function filterImages(category) {
+    const filter_buttons = document.querySelectorAll('.filtro-btn-container button');
+    const imagen_items = document.querySelectorAll('.imagen-item');
+
+    filter_buttons.forEach(button => {
+        button.classList.remove('active');
+    });
+
+    imagen_items.forEach(item => {
+        if (category === 'all' || item.classList.contains(category)) {
+            item.style.display = 'block';
+        } else {
+            item.style.display = 'none';
+        }
+    });
+
+    // Agregar clase 'active' al botón seleccionado
+    document.querySelector(`[onclick="filterImages('${category}')]`).classList.add('active');
+}
