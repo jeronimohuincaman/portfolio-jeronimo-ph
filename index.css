@@ -118,7 +118,6 @@ a {
 
 .filtro-btn-container .active{
     background-color: #555;
-    color: #1E1E1E;
     border-radius: 0 0 12px 12px ;
 }
 
@@ -126,8 +125,9 @@ a {
 .galeria-container {
     display: flex;
     flex-wrap: wrap;
+    gap: 10px;
     justify-content: center;
-    /* align-items: center; */
+    padding: 0 20px;
 }
 
 .imagen-item {
@@ -135,11 +135,16 @@ a {
     height: 200px;
     margin: 10px;
     overflow: hidden;
-    /* display: none; */
+    border-radius: 5px;
 }
 
 .imagen-item img {
     width: 100%;
-    object-fit: contain;
-    object-position: center;
+    height: 100%;
+    object-fit: cover;
+}
+
+.imagen-item:hover {
+    opacity: 0.7;
+    cursor: pointer;
 }
