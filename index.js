@@ -29,7 +29,11 @@ function filterImages(category) {
     const imagen_items = document.querySelectorAll('.imagen-item');
 
     filter_buttons.forEach(button => {
-        button.classList.remove('active');
+        if (button.innerText.toLowerCase() === category ) {
+            button.classList.add('active');
+        } else {
+            button.classList.remove('active');
+        } 
     });
 
     imagen_items.forEach(item => {
@@ -39,7 +43,4 @@ function filterImages(category) {
             item.style.display = 'none';
         }
     });
-
-    // Agregar clase 'active' al botón seleccionado
-    document.querySelector(`[onclick="filterImages('${category}')]`).classList.add('active');
 }
